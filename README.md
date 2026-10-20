@@ -1,6 +1,7 @@
 # Balance Pill
 
 [![CI](https://github.com/Jayve/dsh-balance-pill/actions/workflows/ci.yml/badge.svg)](https://github.com/Jayve/dsh-balance-pill/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-balance-pill.svg)](https://www.npmjs.com/package/dsh-balance-pill)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 English | [简体中文](README.zh-CN.md)
@@ -68,6 +69,16 @@ Requirements:
 
 Pick one source.
 
+### From npm
+
+```sh
+dsh plugin --profile web add dsh-balance-pill
+```
+
+Published as [`dsh-balance-pill`](https://www.npmjs.com/package/dsh-balance-pill)
+by the `jayve-dev` npm account. The package is unscoped, so the install path is
+just the package name.
+
 ### From GitHub
 
 ```sh
@@ -81,20 +92,11 @@ git clone https://github.com/Jayve/dsh-balance-pill.git
 dsh plugin --profile web add ./dsh-balance-pill
 ```
 
-### From npm
-
-```sh
-dsh plugin --profile web add dsh-balance-pill
-```
-
-The npm release is published separately from the GitHub repository. Until the
-first release exists, use one of the two commands above.
-
 `web` is the profile name used by the CLI Web app. The desktop app usually uses
 `desktop`; substitute it in every command:
 
 ```sh
-dsh plugin --profile desktop add github:Jayve/dsh-balance-pill
+dsh plugin --profile desktop add dsh-balance-pill
 ```
 
 After installation, restart the Harness process (Host code changes need a
@@ -282,9 +284,9 @@ so the ledger can be tested without a browser or React renderer.
 1. Update `CHANGELOG.md` and the version in `package.json`.
 2. `npm test && npm run pack:check`.
 3. Commit, tag `vX.Y.Z`, and publish:
-   - `npm publish --access public`
+   - `npm publish --access public` from the `jayve-dev` npm account
    - or push the tag and let `.github/workflows/release.yml` publish with the
-     repository's `NPM_TOKEN` secret.
+     repository's `NPM_TOKEN` secret (a token from the same account).
 
 ## License
 

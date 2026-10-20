@@ -109,6 +109,10 @@ The repository is shaped for the DSH community indexes:
   the topic, and the README.
 - For npm, run `npm publish --access public` locally or push a `vX.Y.Z` tag and
   let `.github/workflows/release.yml` publish with the `NPM_TOKEN` secret.
+- The published package is maintained by the `jayve-dev` npm account;
+  `NPM_TOKEN` must be a token from that account with publish rights. GitHub
+  repository URLs stay under the GitHub account `Jayve`; do not replace them
+  with the npm login.
 - Create a GitHub release from the tag with the matching `CHANGELOG.md` entry.
 
 ## License

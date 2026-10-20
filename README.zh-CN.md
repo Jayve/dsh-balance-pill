@@ -1,6 +1,7 @@
 # 余额条（Balance Pill）
 
 [![CI](https://github.com/Jayve/dsh-balance-pill/actions/workflows/ci.yml/badge.svg)](https://github.com/Jayve/dsh-balance-pill/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-balance-pill.svg)](https://www.npmjs.com/package/dsh-balance-pill)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [English](README.md) | 简体中文
@@ -58,6 +59,14 @@
 
 任选一种来源。
 
+### 从 npm 安装
+
+```sh
+dsh plugin --profile web add dsh-balance-pill
+```
+
+已发布为 [`dsh-balance-pill`](https://www.npmjs.com/package/dsh-balance-pill)，npm 维护者账号为 `jayve-dev`。包名不带 scope，安装路径就是包名本身。
+
 ### 从 GitHub 安装
 
 ```sh
@@ -71,18 +80,10 @@ git clone https://github.com/Jayve/dsh-balance-pill.git
 dsh plugin --profile web add ./dsh-balance-pill
 ```
 
-### 从 npm 安装
-
-```sh
-dsh plugin --profile web add dsh-balance-pill
-```
-
-npm 包与 GitHub 仓库分开发布；在首个 npm 版本出现之前，请使用上面两种方式。
-
 `web` 是 CLI Web 应用使用的 profile 名；桌面版通常叫 `desktop`，替换命令中的 profile 即可：
 
 ```sh
-dsh plugin --profile desktop add github:Jayve/dsh-balance-pill
+dsh plugin --profile desktop add dsh-balance-pill
 ```
 
 安装后需要重启 Harness 进程（Host 代码改动不是刷新页面就能生效），然后重新加载 Web 页面。确认 bundle 层已经进入配置：
@@ -227,8 +228,8 @@ Client 模块上的 `_internals` 是测试桥，不是公开 API。它让账本�
 1. 更新 `CHANGELOG.md` 与 `package.json` 里的版本号。
 2. `npm test && npm run pack:check`。
 3. 提交、打 `vX.Y.Z` tag 并发布：
-   - `npm publish --access public`
-   - 或推送 tag，让 `.github/workflows/release.yml` 使用仓库的 `NPM_TOKEN` secret 发布。
+   - 用 `jayve-dev` npm 账号执行 `npm publish --access public`
+   - 或推送 tag，让 `.github/workflows/release.yml` 使用仓库的 `NPM_TOKEN` secret 发布（token 需属于同一账号）。
 
 ## 许可证
 

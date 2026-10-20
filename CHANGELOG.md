@@ -6,6 +6,12 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- The npm package is live as `dsh-balance-pill@1.0.0`, published by the
+  `jayve-dev` npm account. The install docs now lead with npm and link to the
+  package page; GitHub URLs remain under the `Jayve` GitHub account.
+
 ## [1.0.0] - 2026-10-21
 
 ### Added

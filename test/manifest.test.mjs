@@ -95,6 +95,7 @@ test('both READMEs carry visual and text previews', () => {
     assert.match(text, /docs\/preview\.svg/, `${readme} does not reference the preview`)
     assert.match(text, /##\s*(Preview|预览)/, `${readme} lacks a preview section`)
     assert.match(text, /```text/, `${readme} lacks a text-art preview`)
+    assert.match(text, /npmjs\.com\/package\/dsh-balance-pill/, `${readme} lacks the npm package link`)
   }
 })
 

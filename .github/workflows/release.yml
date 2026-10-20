@@ -3,6 +3,7 @@ name: Release
 # Publishes the package on a version tag when the NPM_TOKEN repository secret
 # is configured. Without the secret the workflow still passes and logs a
 # warning, so pushing a release tag before npm is set up does not fail.
+# NPM_TOKEN must be an npm automation token for the jayve-dev account.
 # Provenance needs `id-token: write`.
 on:
   push:
