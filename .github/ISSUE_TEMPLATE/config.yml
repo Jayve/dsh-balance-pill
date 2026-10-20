@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security report
+    url: https://github.com/Jayve/dsh-balance-pill/security/advisories/new
+    about: Report a vulnerability privately; do not open a public issue.
+  - name: DeepSeek Harness issues
+    url: https://github.com/deepseek-ai/deepseek-harness/issues
+    about: Report Harness itself or another plugin upstream.

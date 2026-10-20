@@ -1,0 +1,72 @@
+{
+  "name": "dsh-balance-pill",
+  "version": "1.0.0",
+  "description": "A composer-dock balance pill for DeepSeek Harness: wallet balance plus this session's spend, read from the signed-in DeepSeek account.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "docs/preview.svg",
+    "docs/architecture.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "balance",
+    "wallet",
+    "spend",
+    "composer",
+    "web-ui",
+    "cordis"
+  ],
+  "author": "Jayve (https://github.com/Jayve)",
+  "license": "MIT",
+  "homepage": "https://github.com/Jayve/dsh-balance-pill#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jayve/dsh-balance-pill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jayve/dsh-balance-pill/issues"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Balance Pill: the signed-in DeepSeek wallet balance and this session's spend,
+# rendered in the composer dock.
+#
+# Optional config (uncomment to pin the client identity sent to the account API;
+# by default the running Web host's release version is used):
+#
+#   config:
+#     clientVersion: 0.2.1-rc.2
+- insert:
+    - id: balance-pill
+      name: dsh-balance-pill

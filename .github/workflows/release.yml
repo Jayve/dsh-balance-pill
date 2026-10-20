@@ -1,0 +1,44 @@
+name: Release
+
+# Publishes the package on a version tag when the NPM_TOKEN repository secret
+# is configured. Without the secret the workflow still passes and logs a
+# warning, so pushing a release tag before npm is set up does not fail.
+# Provenance needs `id-token: write`.
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  npm:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+
+      - name: Test
+        run: npm test
+
+      - name: Check package contents
+        run: npm run pack:check
+
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "${NODE_AUTH_TOKEN}" ]; then
+            echo "::warning title=npm publish skipped::NPM_TOKEN is not configured; set the repository secret and re-run this workflow to publish."
+            exit 0
+          fi
+          npm publish --provenance --access public

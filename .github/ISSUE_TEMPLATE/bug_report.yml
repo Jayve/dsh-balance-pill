@@ -1,0 +1,75 @@
+name: Bug report
+description: Report a broken pill, a wrong reading, or an install problem.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Do not include account tokens, cookies, or full
+        `localStorage` dumps. Security issues belong in the private advisory
+        process described in SECURITY.md.
+  - type: input
+    id: dsh-version
+    attributes:
+      label: DeepSeek Harness version
+      description: About screen, desktop version file, or the runtime package version.
+      placeholder: 0.2.1-rc.2
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Desktop app
+        - CLI Web profile
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: input
+    id: install-source
+    attributes:
+      label: Install source and profile
+      description: npm, GitHub, or local checkout; include the profile name.
+      placeholder: github:Jayve/dsh-balance-pill, profile web
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What the pill showed, what you expected, and how to reproduce it.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Pill tooltip text, route response with amounts removed, or Host log lines.
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed credentials, account identifiers, and private session text.
+          required: true
+        - label: I searched existing issues for the same symptom.
+          required: true

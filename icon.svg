@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Balance pill">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#2f6df6"/>
+  <rect x="15" y="21.5" width="34" height="21" rx="5" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <path d="M37 21.5v21" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="43.5" cy="32" r="2.4" fill="#ffffff"/>
+</svg>
