@@ -6,11 +6,13 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-21
+
 ### Changed
 
-- The npm package is live as `dsh-balance-pill@1.0.0`, published by the
-  `jayve-dev` npm account. The install docs now lead with npm and link to the
-  package page; GitHub URLs remain under the `Jayve` GitHub account.
+- Documentation-only release: the install docs now lead with the published
+  npm package, add the npm badge and package link, and name `jayve-dev` as the
+  npm maintainer. No runtime changes.
 
 ## [1.0.0] - 2026-10-21
 
@@ -42,5 +44,6 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - The route requires a loopback `Host` authority, which blocks a DNS-rebinding
   page served from a public hostname that resolves to 127.0.0.1.
 
-[Unreleased]: https://github.com/Jayve/dsh-balance-pill/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Jayve/dsh-balance-pill/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/Jayve/dsh-balance-pill/releases/tag/v1.0.1
 [1.0.0]: https://github.com/Jayve/dsh-balance-pill/releases/tag/v1.0.0

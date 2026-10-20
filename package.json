@@ -1,6 +1,6 @@
 {
   "name": "dsh-balance-pill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A composer-dock balance pill for DeepSeek Harness: wallet balance plus this session's spend, read from the signed-in DeepSeek account.",
   "type": "module",
   "main": "index.js",
